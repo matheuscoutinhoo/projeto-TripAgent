@@ -1,5 +1,4 @@
 ## TripAgent
-<hr>
 
 - This was my first front-end project. 
 - The project its a home page of a trip agency website, and all the concept was made by myself.
