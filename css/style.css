@@ -1,0 +1,411 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.header {
+  width: 100%;
+  max-height: auto;
+  background-color: #EC5759;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.header .logoArea {
+  width: 150px;
+  padding: 10px 0 10px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.header .logoArea .logoImg {
+  width: 50px;
+}
+.header .logoArea .logoText {
+  font-weight: bold;
+  font-size: 20px;
+}
+.header .menu {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .menu .menuItem {
+  margin: 30px;
+  color: white;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  padding-bottom: 2px;
+}
+.header .menu .menuItem.menuItem:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.35s ease-out;
+}
+.header .menu .menuItem.menuItem:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.header .menu .imgBox {
+  padding: 3px 5px;
+  border-radius: 5px;
+  transition: 90ms ease-out;
+}
+.header .menu .imgBox.imgBox:hover {
+  background-color: white;
+  cursor: pointer;
+}
+.header .menu .imgBox .shopCar {
+  width: 30px;
+}
+
+.presentation {
+  width: 100%;
+  min-height: auto;
+  margin-bottom: 5%;
+}
+.presentation .backImg {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+.presentation .presentationTexts {
+  width: 35%;
+  position: absolute;
+  top: 150px;
+  padding: 150px 0 0 50px;
+  color: white;
+  text-align: left;
+}
+.presentation .presentationTexts .presentationTittle {
+  font-size: 50px;
+  font-weight: bold;
+  padding: 0 0 5px 0;
+}
+.presentation .presentationTexts .presentationDesc {
+  line-height: 25px;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+.presentation .presentationTexts .btnShopNow {
+  padding: 10px 40px;
+  border: 2px solid white;
+  background-color: transparent;
+  font-size: 15px;
+  text-align: center;
+  color: white;
+  transition: 100ms ease-in;
+}
+.presentation .presentationTexts .btnShopNow.btnShopNow:hover {
+  background-color: white;
+  color: #333333;
+  cursor: pointer;
+}
+
+.aboutUs {
+  min-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "whyUsTexts" "advantages";
+  height: auto;
+}
+.aboutUs .whyUsTexts {
+  width: 100%;
+  grid-area: whyUsTexts;
+  min-height: auto;
+  margin-bottom: 1%;
+  text-align: center;
+  padding: 20px;
+}
+.aboutUs .whyUsTexts .whyQuestion, .aboutUs .whyUsTexts .whyDescription {
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+.aboutUs .whyUsTexts .whyHeadline {
+  font-size: 25px;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+.aboutUs .advantages {
+  width: 100%;
+  grid-area: advantages;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.aboutUs .advantages .advantageItem {
+  width: 230px;
+  padding: 20px 10px;
+}
+.aboutUs .advantages .advantageItem .illustrativeIcon {
+  width: 50px;
+  padding-bottom: 10px;
+}
+.aboutUs .advantages .advantageItem .advantageTittle {
+  font-size: 20px;
+  font-weight: bold;
+}
+.aboutUs .advantages .advantageItem .advantageDesc {
+  width: 100%;
+  font-size: 15px;
+  padding-top: 5px;
+}
+
+.shop {
+  margin-top: 40px;
+  width: 100%;
+  height: auto;
+}
+.shop .shopHeadline {
+  background-color: #222222;
+  width: 100%;
+  height: 200px;
+}
+.shop .shopHeadline .shopTittle {
+  color: white;
+  font-size: 50px;
+  padding: 65px 30px;
+}
+.shop .shopContents {
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin-top: 30px;
+  padding: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.shop .shopContents .package {
+  width: 220px;
+  height: 230px;
+  flex: 0 1 auto;
+  margin: 10px;
+  flex-wrap: wrap;
+  transition: 150ms ease-in-out;
+}
+.shop .shopContents .package.package:hover {
+  width: 225px;
+  height: 220px;
+  box-shadow: 0px 10px 30px -5px black;
+  cursor: pointer;
+}
+.shop .shopContents .package .packageCover {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.shop .shopContents .package .packageElements {
+  padding: 10px 10px;
+  position: relative;
+  top: -68px;
+  background-color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+.shop .shopContents .package .packageName {
+  font-size: 14px;
+  color: white;
+}
+.shop .shopContents .package .btnPackage {
+  padding: 5px 10px;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  font-size: 10px;
+  text-align: left;
+  transition: 100ms ease-in;
+  margin-top: 5px;
+}
+.shop .shopContents .package .btnPackage.btnPackage:hover {
+  background-color: white;
+  color: #333333;
+  cursor: pointer;
+}
+
+.contact {
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+}
+.contact .contactHeadline {
+  background-color: #222222;
+  width: 100%;
+  height: 200px;
+}
+.contact .contactTittle {
+  color: white;
+  font-size: 50px;
+  padding: 65px 30px;
+}
+.contact .contactElements {
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(110px, 100%);
+}
+.contact .contactElements .contactImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact .contactElements .contactImg .contactIcon {
+  width: 200px;
+}
+.contact .contactElements .contactForm {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.contact .contactElements .contactForm .contactDesc {
+  font-size: 18px;
+  font-weight: bold;
+  padding-left: 18px;
+}
+.contact .contactElements .contactForm .contactInput {
+  width: 400px;
+  height: 40px;
+  background-color: #E7E7E7;
+  border: transparent;
+  border-radius: 200px;
+  padding: 15px;
+  margin: 8px;
+}
+.contact .contactElements .contactForm .contactInput.contactInput:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+.contact .contactElements .contactForm .contactMessage {
+  width: 400px;
+  height: 190px;
+  background-color: #E7E7E7;
+  border: transparent;
+  border-radius: 20px;
+  padding: 15px;
+  margin: 8px;
+  resize: none;
+}
+.contact .contactElements .contactForm .contactMessage.contactMessage:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+.contact .contactElements .contactForm .contactBtn {
+  width: 150px;
+  margin: 8px;
+  height: 30px;
+  border-radius: 10px;
+  border: transparent;
+  background-color: #EC5759;
+  color: white;
+  cursor: pointer;
+  margin-left: 130px;
+}
+.contact .contactElements .contactForm .contactBtn.contactBtn:active {
+  color: #333333;
+  background-color: white;
+}
+
+.footer {
+  width: 100%;
+  height: auto;
+  background-color: #222222;
+  margin-top: 50px;
+  padding: 30px 0 0 0;
+  font-size: 14px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "aboutFooter none quickLinks" "divide divide divide" "copyright copyright copyright";
+}
+.footer .aboutFooter {
+  grid-area: aboutFooter;
+  padding: 0 0 0px 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.footer .aboutFooter .aboutFooterHeadline {
+  color: white;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.footer .aboutFooter .aboutFooterDesc {
+  color: #bbb;
+  font-size: 15px;
+  text-align: justify;
+}
+.footer .quickLinks {
+  padding: 0px 0 10px 50px;
+  grid-area: quickLinks;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.footer .quickLinks .quickLinksHeadline {
+  color: white;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.footer .quickLinks .quickLinksMenu {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+}
+.footer .quickLinks .quickLinksMenu .linkItem {
+  margin-bottom: 5px;
+}
+.footer .quickLinks .quickLinksMenu .linkItem a {
+  color: #bbb;
+}
+.footer .quickLinks .quickLinksMenu .linkItem a:hover {
+  color: white;
+}
+.footer .divide {
+  grid-area: divide;
+  margin: 30px 0;
+}
+.footer .copyright {
+  grid-area: copyright;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.footer .copyright .copy {
+  color: white;
+  font-size: 16px;
+}
+
+/*# sourceMappingURL=style.css.map */
