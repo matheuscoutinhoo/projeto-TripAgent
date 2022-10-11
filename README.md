@@ -4,7 +4,7 @@
 - The layout design template that I've used is here: https://webflow.com/templates/html/biznus-retail-website-template
 - The project isn't responsive yet, but I will improve it later as my knowledge evolves.
 
-###Used technologies:
+<h3>Used technologies:</h3>
 - HTML 5;
 - CSS 3;
 - SCSS.
